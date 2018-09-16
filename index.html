@@ -33,10 +33,10 @@ Navigations bar
 
 <nav>
     <div class="nav-wrapper light-blue">
-        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#!" class="brand-logo"><img class="responsive-img" src="images/logo.png"> </a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
+            <li><a href="Blog.html">blog</a></li>
             <li><a href="badges.html">Components</a></li>
             <li><a href="collapsible.html">Javascript</a></li>
             <li><a href="mobile.html">Mobile</a></li>
@@ -45,7 +45,7 @@ Navigations bar
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
+    <li><a href="Blog.html">blog</a></li>
     <li><a href="badges.html">Components</a></li>
     <li><a href="collapsible.html">Javascript</a></li>
     <li><a href="mobile.html">Mobile</a></li>
@@ -56,50 +56,194 @@ indhold
 -->
 
 
-<div class="ugensSlide">
-    <div class="ugensSlideIndhold">
+
+
+<!-- Modal Trigger -->
+
+
+
+
+<div class="indhold">
+
+
+
+    <div class="ugensSlide slides">
+
+        <div class="ugensSlideIndhold"></div>
 
     </div>
+
+    <div class="liste2 slides">
+        <div class="liste2indhold sekundaerslide">
+
+        </div>
+    </div>
+
+
+
+
+
 </div>
 
+<section class="grid instagram">
+
+    <div class="instagram-tal">
+
+        <div class="overlayfarvewhite">
+
+                <div class="waves-effect waves-light btn">følg os</div>
+
+        </div>
+
+    </div>
+
+    <div class="instagrambillede billede1">
+
+    </div>
+
+    <div class="instagrambillede billede2">
+
+    </div>
+
+    <div class="instagrambillede billede3">
+
+    </div>
+
+    <div class="instagrambillede billede4">
+
+    </div>
+
+    <div class="instagrambillede billede5">
+
+    </div>
+
+    <div class="instagrambillede billede6">
+
+    </div>
+
+
+</section>
+
+
+
+<footer class="page-footer light-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">Animations lounge er det bedste sted på nettet.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Blog indlæg</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Fedste animationsfilm 2018</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">sjove animationsfilm gifs</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Animation lounge © 2018
+            <a class="grey-text text-lighten-4 right" href="#!">facebook instagram</a>
+        </div>
+    </div>
+</footer>
 
 <!--
 Alle scripts
 -->
 
+
 <script>
 
+
+
+    //Hamburgere menu fra materilize
     $(document).ready(function(){
         $('.sidenav').sidenav();
+        $('.modal').modal();
+
     });
 
 
 
     $(document).ready(function () {
 
+        //ugensslide
+
+        //i dont know. Noget med ajax. Ved ikke hvad ajax  er
         $.ajax({
             type: "GET",
             dataType: "json",
+
+            //Listen der skal hentes ned
             url: "https://api.themoviedb.org/3/list/88330",
             data: {
                 'api_key':'612dfe3ebee135bbfa3a3a3b371c21e2',
                 'language':'da_DA'
             },
+
+            //gør dette hvis det virker
             success: function(result) {
+                console.log(result),
 
-                console.log(result);
+                //Vælger div'en "ugensslide". Prepend indsætter det i parentesen. I dette tilfælde er det navnet på listen.
+                $(".ugensSlide").prepend("<h2>" + result.name + "</h2>")
 
-                console.log(result.name);
-
-                $(".ugensSlide").prepend("<h1>" + result.name + "</h1>")
 
                 $.each(result.items, function(i, ting){
-                    console.log(i)
-                    $(".ugensSlideIndhold").append("<div class=\"lol" + i + "\"></div>");
+
+                    //her indsættes der en div for hver ting i listen result.items og giver den klassen lol + placering i listen etc lol0 lol1 lol2. Det
+                    $(".ugensSlideIndhold").append("<div class=\"lol" + i + " ugensboks \" ></div>");
                 });
 
                 $.each(result.items, function(i, ting){
-                    $(".lol" + i).append("<h2>" + ting.title + "</h2>" + "<img src=\"https://image.tmdb.org/t/p/w400" + ting.poster_path + "\">");
+                    //her indsættes billede og tittel i de rigtige divs
+                    $(".lol" + i).append("<img src=\"https://image.tmdb.org/t/p/w300" + ting.poster_path + "\" onclick='mereinfo("+ ting.id +")' '>" + "<a href=\"undersider/" + ting.id + ".html\"> "+ ting.title + "</a>");
+                });
+            },
+            error: function (error) {
+                // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
+                console.log(error);
+            }
+
+
+        });
+
+        //liste2
+
+        //i dont know. Noget med ajax. Ved ikke hvad ajax  er
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+
+            //Listen der skal hentes ned
+            url: "https://api.themoviedb.org/3/list/88339",
+            data: {
+                'api_key':'612dfe3ebee135bbfa3a3a3b371c21e2',
+                'language':'da_DA'
+            },
+
+            //gør dette hvis det virker
+            success: function(result) {
+
+
+                //Vælger div'en "ugensslide". Prepend indsætter det i parentesen. I dette tilfælde er det navnet på listen.
+                $(".liste2").prepend("<h2>" + result.name + "</h2> <p>" + result.description + "</p>")
+
+
+                $.each(result.items, function(i, ting){
+
+                    //her indsættes der en div for hver ting i listen result.items og giver den klassen lol + placering i listen etc lol0 lol1 lol2. Det
+                    $(".liste2indhold ").append("<div class=\"kok" + i + " ugensboks \" ></div>");
+                });
+
+                $.each(result.items, function(i, ting){
+                    //her indsættes billede og tittel i de rigtige divs
+                    $(".kok" + i).append("<img src=\"https://image.tmdb.org/t/p/w200" + ting.poster_path + "\">" + "<p>" + ting.title + "</p>");
                 });
             },
             error: function (error) {
@@ -117,27 +261,34 @@ Alle scripts
 
 
 
-
+    //venter til at alt ajax er færdigt.
     $(document).ajaxComplete(function () {
 
+        //loader javascript til slide
         $.getScript("//code.jquery.com/jquery-1.11.0.min.js");
         $.getScript("//code.jquery.com/jquery-migrate-1.2.1.min.js");
         $.getScript("slick/slick.min.js");
+        $.getScript("js/slides.js");
 
 
-        $('.ugensSlideIndhold').slick({
+        //indstillinger til ugensslide indhold
 
-            infinite: true,
-            centerMode: true,
-            arrows: true,
-            slidesToShow: 3,
-            dots: true,
-            slidesToScroll: 3
-        });
+
+
 
 
     });
 
+
+
+
+    function mereinfo(a) {
+
+        console.log(a);
+
+
+
+    }
 
 
 </script>

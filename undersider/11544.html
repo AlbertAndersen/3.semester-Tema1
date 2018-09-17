@@ -115,7 +115,11 @@
                 console.log(result),
 
                     //Vælger div'en "ugensslide". Prepend indsætter det i parentesen. I dette tilfælde er det navnet på listen.
-                    $(".filmen").prepend("<h2>" + result.title + "</h2> <div> "+ result.overview +" </div> <img src=\"https://image.tmdb.org/t/p/w200" + result.poster_path +"\">")
+                    $(".filmen").prepend(
+                        "<h2>" + result.title + "</h2> " +
+                        "<div> "+ result.overview +" </div> " +
+                        "<img src=\"https://image.tmdb.org/t/p/w200" + result.poster_path +"\">" +
+                    )
 
             },
             error: function (error) {

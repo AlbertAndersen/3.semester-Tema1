@@ -31,7 +31,6 @@
                 'api_key':'612dfe3ebee135bbfa3a3a3b371c21e2',
                 'language':'da_DA'
             },
-
             success: function(result) {
 
                 $(".liste4").prepend("<h2>" + result.name + "</h2> <p>" + result.description + "</p>")
@@ -46,7 +45,6 @@
                     $(".nok" + i).append("<img src=\"https://image.tmdb.org/t/p/w200" + ting.poster_path + "\">" + "<a href=\"undersider/" + ting.id + ".html\"> "+ ting.title + "</a>");
                 });
             },
-
             error: function (error) {
                 // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
                 console.log(error);

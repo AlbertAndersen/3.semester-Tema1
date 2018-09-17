@@ -64,6 +64,8 @@ Full skærm slider
 
 
 <div class="fullSlider">
+
+    <!-- Slide 1 -->
     <a href="#" class="ugensFilm alleSlides">
         <br>
         <br>
@@ -83,10 +85,9 @@ Full skærm slider
             <p>ugens film er i denne uge shrek</p>
         </div>
 
-
-
-
     </a>
+
+    <!-- Slide 2 -->
     <a href="#" class="udvalgtBlogindlaeg alleSlides">
         <br>
         <br>
@@ -107,6 +108,8 @@ Full skærm slider
         </div>
 
     </a>
+
+    <!-- Slide 3 -->
     <a href="#" class="udvalgtListe alleSlides">
 
         <br>
@@ -146,13 +149,16 @@ Full skærm slider
     <!--
 
 
-    Slider 4
+    Slider 4. Det første slide på siden
 
 
     -->
 
+
     <div class="liste4 slides">
         <div class="liste4indhold sekundaerslide">
+
+
 
         </div>
     </div>
@@ -178,7 +184,7 @@ Full skærm slider
     <!--
 
 
-   Slider 4
+   Slider 2
 
 
    -->
@@ -357,6 +363,9 @@ Alle scripts
 
         });
 
+
+
+
         //liste2
 
         //i dont know. Noget med ajax. Ved ikke hvad ajax  er
@@ -398,7 +407,12 @@ Alle scripts
 
         });
 
-        //liste4
+
+
+
+
+
+        //liste3
 
         //i dont know. Noget med ajax. Ved ikke hvad ajax  er
         $.ajax({
@@ -416,6 +430,9 @@ Alle scripts
             success: function(result) {
 
 
+
+
+
                 //Vælger div'en "ugensslide". Prepend indsætter det i parentesen. I dette tilfælde er det navnet på listen.
                 $(".liste3").prepend("<h2>" + result.name + "</h2> <p>" + result.description + "</p>")
 
@@ -431,6 +448,10 @@ Alle scripts
                     $(".bok" + i).append("<img src=\"https://image.tmdb.org/t/p/w200" + ting.poster_path + "\">" + "<a href=\"undersider/" + ting.id + ".html\"> "+ ting.title + "</a>");
                 });
             },
+
+
+
+
             error: function (error) {
                 // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
                 console.log(error);
@@ -438,6 +459,10 @@ Alle scripts
 
 
         });
+
+
+
+
 
         //liste4
 
@@ -457,6 +482,8 @@ Alle scripts
             success: function(result) {
 
 
+
+
                 //Vælger div'en "ugensslide". Prepend indsætter det i parentesen. I dette tilfælde er det navnet på listen.
                 $(".liste4").prepend("<h2>" + result.name + "</h2> <p>" + result.description + "</p>")
 
@@ -465,13 +492,19 @@ Alle scripts
 
                     //her indsættes der en div for hver ting i listen result.items og giver den klassen lol + placering i listen etc lol0 lol1 lol2. Det
                     $(".liste4indhold ").append("<div class=\"nok" + i + " ugensboks \" ></div>");
+
                 });
+
+
 
                 $.each(result.items, function(i, ting){
                     //her indsættes billede og tittel i de rigtige divs
                     $(".nok" + i).append("<img src=\"https://image.tmdb.org/t/p/w200" + ting.poster_path + "\">" + "<a href=\"undersider/" + ting.id + ".html\"> "+ ting.title + "</a>");
                 });
             },
+
+
+
             error: function (error) {
                 // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
                 console.log(error);

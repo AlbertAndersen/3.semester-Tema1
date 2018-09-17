@@ -75,14 +75,21 @@ $farve: #ffffff;
 
 .ugensFilm { // background billede
    background-image: url("../images/ugensFilm.jpg");
+  background-size: cover;
+  background-position: center center;
  }
 
 .udvalgtBlogindlaeg { // background billede
   background-image: url("../images/blogPost.jpg");
+  background-size: cover;
+  background-position: center center;
 
 }
 .udvalgtListe { // background billede
   background-image: url("../images/maeYouCry.jpg");
+  background-size: cover;
+  background-position: center center;
+
 
 }
 

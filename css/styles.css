@@ -82,6 +82,23 @@ h2 {
   max-width: 800px;
   margin: auto; }
 
+#womanpic{
+   height: 200px;
+  width: auto;
+  }
+
+
+
+  #infoboks{
+    font-size: 18pt;
+  }
+
+
+
+
+
+
+
 @media screen and (min-width: 644px) {
   .posts {
     flex-direction: row; }

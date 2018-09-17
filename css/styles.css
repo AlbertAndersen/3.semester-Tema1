@@ -159,6 +159,18 @@ h2 {
   background-position: center;
   background-size: cover; }
 
+
+/*=========OVERORDNET BLOG=========*/
+.blogudenom{
+    display: flex;
+    justify-content: center;
+}
+
+.blogalle{
+    width: 100px;
+}
+/*=========OVERORDNET BLOG SLUT=========*/
+
 @media screen and (max-width: 644px) {
   /*================Instagram===============*/
   .instagram {

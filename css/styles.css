@@ -1,12 +1,8 @@
 body {
   background-color: #eeeeee; }
 
-.slides {
-  padding: 50px; }
-
-.ugensSlide h2 {
-  text-align: center;
-  text-transform: uppercase; }
+h2 {
+  padding-top: 0px; }
 
 .nav-wrapper {
   padding: 0 50px; }
@@ -14,16 +10,49 @@ body {
 .brand-logo img {
   height: 64px; }
 
+.slides {
+  padding: 0 50px 50px 50px; }
+
+.ugensSlide h2 {
+  text-align: center;
+  text-transform: uppercase; }
+
+.liste3 {
+  background-color: #ffffff; }
+
 .posts {
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
 
 .posts div {
-  width: 33%; }
+  padding: 20px; }
 
 .blog {
   padding: 20px 50px;
   background-color: #ffffff; }
 
+.fullSlider a {
+  text-decoration: none;
+  color: white; }
+
+.ugensFilm {
+  background-image: url("../images/ugensFilm.jpg"); }
+
+.udvalgtBlogindlaeg {
+  background-image: url("../images/blogPost.jpg"); }
+
+.udvalgtListe {
+  background-image: url("../images/maeYouCry.jpg"); }
+
+.tekstSlide {
+  padding: 50px; }
+
+@media screen and (min-width: 644px) {
+  .posts {
+    flex-direction: row; }
+
+  .posts div {
+    width: 33%; } }
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;

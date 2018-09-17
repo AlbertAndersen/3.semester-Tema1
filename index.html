@@ -28,7 +28,11 @@
 <body>
 
 <!--
+
+
 Navigations bar
+
+
 -->
 
 <nav>
@@ -52,13 +56,80 @@ Navigations bar
 </ul>
 
 <!--
-indhold
+
+
+Full skærm slider
+
 -->
 
 
+<div class="fullSlider">
+    <a href="#" class="ugensFilm alleSlides">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="tekstSlide">
+            <h1>Ugens film</h1>
+            <p>ugens film er i denne uge shrek</p>
+        </div>
 
 
-<!-- Modal Trigger -->
+
+
+    </a>
+    <a href="#" class="udvalgtBlogindlaeg alleSlides">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="tekstSlide">
+            <h1>Ugens blog indlæg</h1>
+            <p>ugens film er i denne uge shrek</p>
+        </div>
+
+    </a>
+    <a href="#" class="udvalgtListe alleSlides">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="tekstSlide">
+            <h1>ugens liste</h1>
+            <p>ugens film er i denne uge shrek</p>
+        </div>
+
+    </a>
+</div>
+
 
 
 
@@ -66,12 +137,33 @@ indhold
 <div class="indhold">
 
 
-
+    <!--
     <div class="ugensSlide slides">
-
         <div class="ugensSlideIndhold"></div>
-
     </div>
+    -->
+
+    <!--
+
+
+    Slider 4
+
+
+    -->
+
+    <div class="liste4 slides">
+        <div class="liste4indhold sekundaerslide">
+
+        </div>
+    </div>
+
+    <!--
+
+
+    blog
+
+
+    -->
 
 
     <div class="blog">
@@ -83,8 +175,31 @@ indhold
     </div>
     </div>
 
+    <!--
+
+
+   Slider 4
+
+
+   -->
+
+
     <div class="liste2 slides">
         <div class="liste2indhold sekundaerslide">
+
+        </div>
+    </div>
+
+    <!--
+
+
+   Slider 4
+
+
+   -->
+
+    <div class="liste3 slides">
+        <div class="liste3indhold sekundaerslide">
 
         </div>
     </div>
@@ -94,6 +209,15 @@ indhold
 
 
 </div>
+
+<!--
+
+
+   Instagram
+
+-->
+
+<!---
 
 <section class="grid instagram">
 
@@ -134,7 +258,15 @@ indhold
 
 </section>
 
+-->
 
+<!--
+
+
+   footer
+
+
+-->
 
 <footer class="page-footer light-blue lighten-3">
     <div class="container">
@@ -162,8 +294,14 @@ indhold
     </div>
 </footer>
 
+
+
 <!--
+
+
 Alle scripts
+
+
 -->
 
 
@@ -171,16 +309,12 @@ Alle scripts
 
 
 
-    //Hamburgere menu fra materilize
-    $(document).ready(function(){
-        $('.sidenav').sidenav();
-        $('.modal').modal();
-
-    });
 
 
 
-    $(document).ready(function () {
+    $(document).ready(function () { //kører først når dokumentet er klar
+
+        $('.sidenav').sidenav(); //fortæller at materilize at vi bruger deres navbar
 
         //ugensslide
 
@@ -231,7 +365,7 @@ Alle scripts
             dataType: "json",
 
             //Listen der skal hentes ned
-            url: "https://api.themoviedb.org/3/list/88339",
+            url: "https://api.themoviedb.org/3/list/88464",
             data: {
                 'api_key':'612dfe3ebee135bbfa3a3a3b371c21e2',
                 'language':'da_DA'
@@ -253,13 +387,109 @@ Alle scripts
 
                 $.each(result.items, function(i, ting){
                     //her indsættes billede og tittel i de rigtige divs
-                    $(".kok" + i).append("<img src=\"https://image.tmdb.org/t/p/w200" + ting.poster_path + "\">" + "<p>" + ting.title + "</p>");
+                    $(".kok" + i).append("<img src=\"https://image.tmdb.org/t/p/w200" + ting.poster_path + "\">" + "<a href=\"undersider/" + ting.id + ".html\"> "+ ting.title + "</a>");
                 });
             },
             error: function (error) {
                 // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
                 console.log(error);
             }
+
+
+        });
+
+        //liste4
+
+        //i dont know. Noget med ajax. Ved ikke hvad ajax  er
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+
+            //Listen der skal hentes ned
+            url: "https://api.themoviedb.org/3/list/88465",
+            data: {
+                'api_key':'612dfe3ebee135bbfa3a3a3b371c21e2',
+                'language':'da_DA'
+            },
+
+            //gør dette hvis det virker
+            success: function(result) {
+
+
+                //Vælger div'en "ugensslide". Prepend indsætter det i parentesen. I dette tilfælde er det navnet på listen.
+                $(".liste3").prepend("<h2>" + result.name + "</h2> <p>" + result.description + "</p>")
+
+
+                $.each(result.items, function(i, ting){
+
+                    //her indsættes der en div for hver ting i listen result.items og giver den klassen lol + placering i listen etc lol0 lol1 lol2. Det
+                    $(".liste3indhold ").append("<div class=\"bok" + i + " ugensboks \" ></div>");
+                });
+
+                $.each(result.items, function(i, ting){
+                    //her indsættes billede og tittel i de rigtige divs
+                    $(".bok" + i).append("<img src=\"https://image.tmdb.org/t/p/w200" + ting.poster_path + "\">" + "<a href=\"undersider/" + ting.id + ".html\"> "+ ting.title + "</a>");
+                });
+            },
+            error: function (error) {
+                // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
+                console.log(error);
+            }
+
+
+        });
+
+        //liste4
+
+        //i dont know. Noget med ajax. Ved ikke hvad ajax  er
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+
+            //Listen der skal hentes ned
+            url: "https://api.themoviedb.org/3/list/88466",
+            data: {
+                'api_key':'612dfe3ebee135bbfa3a3a3b371c21e2',
+                'language':'da_DA'
+            },
+
+            //gør dette hvis det virker
+            success: function(result) {
+
+
+                //Vælger div'en "ugensslide". Prepend indsætter det i parentesen. I dette tilfælde er det navnet på listen.
+                $(".liste4").prepend("<h2>" + result.name + "</h2> <p>" + result.description + "</p>")
+
+
+                $.each(result.items, function(i, ting){
+
+                    //her indsættes der en div for hver ting i listen result.items og giver den klassen lol + placering i listen etc lol0 lol1 lol2. Det
+                    $(".liste4indhold ").append("<div class=\"nok" + i + " ugensboks \" ></div>");
+                });
+
+                $.each(result.items, function(i, ting){
+                    //her indsættes billede og tittel i de rigtige divs
+                    $(".nok" + i).append("<img src=\"https://image.tmdb.org/t/p/w200" + ting.poster_path + "\">" + "<a href=\"undersider/" + ting.id + ".html\"> "+ ting.title + "</a>");
+                });
+            },
+            error: function (error) {
+                // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
+                console.log(error);
+            }
+
+
+        });
+
+
+        $(document).ajaxComplete(function () {
+
+            //loader javascript til slide
+            $.getScript("//code.jquery.com/jquery-1.11.0.min.js");
+            $.getScript("//code.jquery.com/jquery-migrate-1.2.1.min.js");
+            $.getScript("slick/slick.min.js");
+            $.getScript("js/slides.js");
+
+
 
 
         });
@@ -272,22 +502,12 @@ Alle scripts
 
 
     //venter til at alt ajax er færdigt.
-    $(document).ajaxComplete(function () {
-
-        //loader javascript til slide
-        $.getScript("//code.jquery.com/jquery-1.11.0.min.js");
-        $.getScript("//code.jquery.com/jquery-migrate-1.2.1.min.js");
-        $.getScript("slick/slick.min.js");
-        $.getScript("js/slides.js");
 
 
-        //indstillinger til ugensslide indhold
+    // move next carousel
 
 
 
-
-
-    });
 
 
 

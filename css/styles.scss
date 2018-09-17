@@ -1,39 +1,126 @@
-body {
+//generelt
+
+
+body {// farven på body
   background-color: #eeeeee;
 }
-.slides {
-  padding: 50px;
+
+h2 { //
+  padding-top: 0px;
 }
 
-.ugensSlide h2 {
+//farven på hveranden element på forsiden
+$farve: #ffffff;
+
+
+//navbar
+
+.nav-wrapper { // bestemmer hvor meget plads der er mellem kanten af skærmen og links i navbar
+  padding: 0 50px;
+}
+
+.brand-logo img { // gør at logoet ikke fylder hele skærmen
+  height: 64px;
+}
+
+
+
+
+
+//liste slides
+
+.slides { //giver lidt plads på slides
+  padding: 0 50px 50px 50px;
+}
+
+.ugensSlide h2 { //denne bruges ikke mere
   text-align: center;
   text-transform: uppercase;
 }
 
-.nav-wrapper {
-  padding: 0 50px;
+.liste3 { //background farve på det sidste slide
+  background-color: $farve;
 }
 
-.brand-logo img {
-  height: 64px;
-}
 
-.liste2 {
 
-}
 
-.posts {
+//blog
+
+.posts { // gør at blog posts står under hinanden
   display: flex;
+  flex-direction: column;
 
 }
 
-.posts div {
-  width: 33%;
+.posts div { // giver dem lidt padding
+  padding: 20px;
 }
-.blog {
+
+
+.blog { // same but different. Giver også farven
   padding: 20px 50px;
-  background-color: #ffffff;
+  background-color: $farve;
 }
+
+
+
+
+//full slider
+
+.fullSlider a {  // gør at teksten ikke er blå og underlinded
+  text-decoration: none;
+  color: white;
+}
+
+.ugensFilm { // background billede
+   background-image: url("../images/ugensFilm.jpg");
+ }
+
+.udvalgtBlogindlaeg { // background billede
+  background-image: url("../images/blogPost.jpg");
+
+}
+.udvalgtListe { // background billede
+  background-image: url("../images/maeYouCry.jpg");
+
+}
+
+
+
+.tekstSlide { // gør at teksten ikke står ved kanten
+  padding: 50px;
+}
+
+
+
+
+//responsiv
+
+@media screen and (min-width: 644px) {
+
+  //Gør at blog post står ved siden af hinanden når skærmen er større end 644
+  .posts {
+    flex-direction: row;
+  }
+
+  // gør at de kun fylder 33%
+  .posts div {
+    width: 33%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+// alt dette skal ikke brugers. Det var inden Anne synes mine instagram billeder var grimme
 
 //instagram
 
@@ -120,6 +207,7 @@ body {
   background-position: center;
   background-size: cover;
 }
+
 
 
 @media screen and (max-width: 644px) {

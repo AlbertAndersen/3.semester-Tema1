@@ -3,6 +3,8 @@ $('.ugensSlideIndhold').slick({
     dot: true,
     slidesToShow: 3,
     centerPadding: '40px',
+    autoplay: true,
+    autoplaySpeed: 2510,
     responsive: [
         {
             breakpoint: 900,
@@ -29,6 +31,8 @@ $('.sekundaerslide').slick({
     dot: true,
     slidesToShow: 3,
     centerPadding: '40px',
+    autoplay: true,
+    autoplaySpeed: 3320,
     responsive: [
         {
             breakpoint: 768,

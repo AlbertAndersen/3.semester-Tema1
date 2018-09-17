@@ -2,7 +2,7 @@ body {
   background-color: #eeeeee; }
 
 .slides {
-  padding: 0 50px; }
+  padding: 50px; }
 
 .ugensSlide h2 {
   text-align: center;
@@ -13,6 +13,16 @@ body {
 
 .brand-logo img {
   height: 64px; }
+
+.posts {
+  display: flex; }
+
+.posts div {
+  width: 33%; }
+
+.blog {
+  padding: 20px 50px;
+  background-color: #ffffff; }
 
 .grid {
   display: grid;
@@ -42,38 +52,38 @@ body {
   padding-top: 150px; }
 
 .instagrambillede {
-  background-image: url("../images/memeTest.jpg"); }
+  background-image: url("../images/1.jpg"); }
 
 .instagrambillede.billede1 {
   grid-row: 1/2;
   grid-column: 4/7;
-  background-image: url("../images/memeTest.jpg");
+  background-image: url("../images/2.jpg");
   background-size: cover; }
 
 .instagrambillede.billede2 {
   grid-row: 1/2;
   grid-column: 7/10;
-  background-image: url("../images/memeTest.jpg");
+  background-image: url("../images/3.jpg");
   background-size: cover; }
 
 .instagrambillede.billede3 {
   grid-row: 1/2;
   grid-column: 10/13;
-  background-image: url("../images/memeTest.jpg");
+  background-image: url("../images/4.jpg");
   background-size: cover;
   background-position: center; }
 
 .instagrambillede.billede4 {
   grid-row: 2/3;
   grid-column: 4/7;
-  background-image: url("../images/memeTest.jpg");
+  background-image: url("../images/5.jpg");
   background-position: center;
   background-size: cover; }
 
 .instagrambillede.billede5 {
   grid-row: 2/3;
   grid-column: 7/10;
-  background-image: url("../images/memeTest.jpg");
+  background-image: url("../images/6.jpg");
   background-size: cover;
   background-position: center; }
 

@@ -51,13 +51,46 @@
     <li><a href="mobile.html">Mobile</a></li>
 </ul>
 
+<div class="overskrift">
 
+</div>
 
 <div class="filmen">
 
+    <div class="tekstTilBilleder">
+        <div class="beskrivelsen">
+            <h5>Beskrivelse</h5>
+
+        </div>
+
+        <div class="detaljer">
+            <h5>Detaljer</h5>
+
+
+            <div class="vote">
+
+                <h6>rating</h6>
+            </div>
+
+            <div class="runtime">
+
+                <h6>runtime</h6>
+
+            </div>
+
+            <div class="release_date">
+
+                <h6>release date</h6>
+
+            </div>
+        </div>
+
+    </div>
 
 
 </div>
+
+
 
 
 
@@ -90,11 +123,6 @@
 
 <script>
 
-    $(document).ready(function(){
-        $('.sidenav').sidenav();
-
-    });
-
 
 
     $(document).ready(function () {
@@ -115,11 +143,44 @@
                 console.log(result),
 
                     //Vælger div'en "ugensslide". Prepend indsætter det i parentesen. I dette tilfælde er det navnet på listen.
-                    $(".filmen").prepend(
-                        "<h2>" + result.title + "</h2> " +
-                        "<div> "+ result.overview +" </div> " +
-                        "<img src=\"https://image.tmdb.org/t/p/w200" + result.poster_path +"\">" +
+                    $(".overskrift").prepend(
+                        "<h2>" + result.title + "</h2>"
+
                     )
+
+                    $(".filmen").prepend(
+
+                        "<img src=\"https://image.tmdb.org/t/p/w780" + result.poster_path +"\">"
+                    )
+
+                $(".beskrivelsen").append(
+
+                    "<div> "  + result.overview + " </div> "
+
+
+                )
+
+
+
+                $(".runtime").append(
+
+                    "<div> "  + result.runtime + " min </div> "
+
+                )
+
+                $(".vote").append(
+
+                    "<div> "  + result.vote_average + "/10 </div> "
+
+                )
+
+                $(".release_date").append(
+
+                    "<div> "  + result.release_date + " </div> "
+
+                )
+
+
 
             },
             error: function (error) {

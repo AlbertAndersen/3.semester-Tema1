@@ -1,0 +1,37 @@
+/*=========OVERORDNET BLOG=Christina=========*/
+.rowch{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    background-color: #fff;
+}
+.columnch{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+.blogallech{
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.udenomaltch{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+@media (max-width: 800px){
+    .columnch{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 600px){
+    .columnch{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+/*=========OVERORDNET BLOG SLUT=Christina=========*/

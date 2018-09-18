@@ -1,5 +1,5 @@
 body {
-  background-color: #FFFFFF; }
+  background-color: #e1f5fe; }
 
 h1{
   font-size: 36pt;
@@ -36,7 +36,7 @@ h2 {
 .blog {
   padding: 20px 50px;
   margin-bottom: 20px;
-  background-color: #ffffff; }
+  background-color: #e1f5fe; }
 
 .fullSlider a {
   text-decoration: none;
@@ -93,11 +93,12 @@ h2 {
 
 
 #1{
-  background-color: #ffffff;
+  background-color: #e1f5fe;
 }
 
 #overskriftAnne{
-  background-color: #FFFFFF;
+  background-color: #e1f5fe;
+  margin: 20px;
 }
 
 #womanpic{
@@ -106,16 +107,21 @@ h2 {
   }
 
   #infoboks{
-    font-size: 18pt;
+    font-size: 16pt;
     background-color: #FFFFFF;
     padding: 30px;
+    margin: 20px;
   }
 
 #text{
   background-color: #FFFFFF;
   padding: 30px;
+  margin: 20px;
 }
 
+#postboks{
+  background-color: #FFFFFF;
+}
 
 @media screen and (min-width: 644px) {
   .posts {
@@ -194,55 +200,17 @@ h2 {
   background-position: center;
   background-size: cover; }
 
-@media screen and (max-width: 644px) {
-  /*================Instagram===============*/
-  .instagram {
-    height: auto; }
-
-  .instagrambillede {
-    height: 200px; }
-
-  .instagrambillede.billede1 {
-    grid-column: 1/7;
-    grid-row: 1/2; }
-
-  .instagrambillede.billede2 {
-    grid-column: 7/13;
-    grid-row: 1/2; }
-
-  .instagrambillede.billede3 {
-    grid-column: 1/7;
-    grid-row: 2/3; }
-
-  .instagrambillede.billede4 {
-    grid-column: 7/13;
-    grid-row: 2/3; }
-
-  .instagrambillede.billede5 {
-    display: none; }
-
-  .instagrambillede.billede6 {
-    display: none; }
-
-  .instagram-tal {
-    grid-row: 3/4;
-    grid-column: 1/13; }
-
-  .overlayfarvewhite h1 {
-    padding-top: 50px; }
-
-  .overlayfarvewhite {
-    height: 300px;
-    background-color: rgba(247, 247, 247, 0.8); } }
-
 
 @media screen and (min-width: 768px) {
 
   #overskriftAnne{
-    text-align: center;
+
   }
 
-
+  #womanpic{
+    width: 2000px;
+    height: auto;
+  }
 
 
 

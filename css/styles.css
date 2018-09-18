@@ -1,8 +1,14 @@
 body {
-  background-color: #eeeeee; }
+  background-color: #FFFFFF; }
+
+h1{
+  font-size: 36pt;
+}
 
 h2 {
-  padding-top: 0px; }
+  padding-top: 0;
+  padding-left: 15px;
+}
 
 .nav-wrapper {
   padding: 0 50px; }
@@ -29,6 +35,7 @@ h2 {
 
 .blog {
   padding: 20px 50px;
+  margin-bottom: 20px;
   background-color: #ffffff; }
 
 .fullSlider a {
@@ -82,21 +89,32 @@ h2 {
   max-width: 800px;
   margin: auto; }
 
+/*Anne har kodet dette------------*/
+
+
+#1{
+  background-color: #ffffff;
+}
+
+#overskriftAnne{
+  background-color: #FFFFFF;
+}
+
 #womanpic{
    height: 200px;
   width: auto;
   }
 
-
-
   #infoboks{
     font-size: 18pt;
+    background-color: #FFFFFF;
+    padding: 30px;
   }
 
-
-
-
-
+#text{
+  background-color: #FFFFFF;
+  padding: 30px;
+}
 
 
 @media screen and (min-width: 644px) {
@@ -216,5 +234,35 @@ h2 {
   .overlayfarvewhite {
     height: 300px;
     background-color: rgba(247, 247, 247, 0.8); } }
+
+
+@media screen and (min-width: 768px) {
+
+  #overskriftAnne{
+    text-align: center;
+  }
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+
+}
+
+@media screen and (min-width: 1500px) {
+
+}
+
+
+
 
 /*# sourceMappingURL=styles.css.map */

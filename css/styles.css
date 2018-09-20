@@ -136,6 +136,13 @@ h3 a {color: black;
   background-color: #FFFFFF;
 }
 
+.billederiblog{
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 @media screen and (min-width: 860px) {
   .posts {
     flex-direction: row;
@@ -345,7 +352,7 @@ h3 a {color: black;
     margin-left: 200px;
   }
 
-}
+}}
 
 
 

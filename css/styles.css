@@ -1,8 +1,14 @@
 body {
-  background-color: #eeeeee; }
+  background-color: #e1f5fe; }
+
+h1{
+  font-size: 36pt;
+}
 
 h2 {
-  padding-top: 0px; }
+  padding-top: 0;
+  padding-left: 15px;
+}
 
 .nav-wrapper {
   padding: 0 70px; }
@@ -29,7 +35,8 @@ h2 {
 
 .blog {
   padding: 20px 50px;
-  background-color: #ffffff; }
+  margin-bottom: 20px;
+  background-color: #e1f5fe; }
 
 .fullSlider a {
   text-decoration: none;
@@ -83,6 +90,7 @@ h2 {
   margin: auto; }
 
 
+
 #womanpic{
    height: 200px;
   width: auto;
@@ -90,15 +98,40 @@ h2 {
 
 
 
-  #infoboks{
-    font-size: 18pt;
+/*Anne har kodet dette------------*/
+
+
+
+#1{
+  background-color: #e1f5fe;
+}
+
+#overskriftAnne{
+  background-color: #e1f5fe;
+  margin: 20px;
+}
+
+#womanpic{
+   height: auto;
+  width: 100%;
   }
 
+  #infoboks{
+    font-size: 16pt;
+    background-color: #FFFFFF;
+    padding: 30px;
+    margin: 20px;
+  }
 
+#text{
+  background-color: #FFFFFF;
+  padding: 30px;
+  margin: 20px;
+}
 
-
-
-
+#postboks{
+  background-color: #FFFFFF;
+}
 
 
 @media screen and (min-width: 644px) {
@@ -179,45 +212,141 @@ h2 {
   background-size: cover; }
 
 
+
 @media screen and (max-width: 644px) {
   /*================Instagram===============*/
   .instagram {
     height: auto; }
 
-  .instagrambillede {
-    height: 200px; }
 
-  .instagrambillede.billede1 {
-    grid-column: 1/7;
-    grid-row: 1/2; }
+@media screen and (min-width: 768px) {
 
-  .instagrambillede.billede2 {
-    grid-column: 7/13;
-    grid-row: 1/2; }
+  #womanpic{
+    width: 100%;
+    height: auto;
+  }
 
-  .instagrambillede.billede3 {
-    grid-column: 1/7;
-    grid-row: 2/3; }
+  #infoboks{
+    font-size: 20pt;
+    background-color: #FFFFFF;
+    width: 50%;
+    margin-left: 100px;
+  }
 
-  .instagrambillede.billede4 {
-    grid-column: 7/13;
-    grid-row: 2/3; }
+  #text{
+    background-color: #FFFFFF;
+    padding: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 24pt;
+  }
 
-  .instagrambillede.billede5 {
-    display: none; }
+  .posts {
+    display: flex;
+    flex-direction: column;
+    font-size: 24pt;
+  }
 
-  .instagrambillede.billede6 {
-    display: none; }
+  .posts div {
+    padding: 20px; }
 
-  .instagram-tal {
-    grid-row: 3/4;
-    grid-column: 1/13; }
+  .blog {
+    padding: 20px 50px;
+    margin-bottom: 20px;
+    background-color: #e1f5fe; }
 
-  .overlayfarvewhite h1 {
-    padding-top: 50px; }
+  h4{
+    font-size: 30pt;
+  }
 
-  .overlayfarvewhite {
-    height: 300px;
-    background-color: rgba(247, 247, 247, 0.8); } }
+  #post1pic{
+    width: 100%;
+    height: auto;
+  }
+
+  #post2pic{
+    width: 100%;
+    height: auto;
+  }
+
+  #post3pic{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .posts {
+    display: flex;
+    flex-direction: column;
+    font-size: 24pt;
+  }
+
+  .posts div {
+    padding: 20px; }
+
+  .blog {
+    padding: 20px 50px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #e1f5fe; }
+}
+
+@media screen and (min-width: 1200px) {
+  #overskriftAnne{
+    background-color: #e1f5fe;
+    margin-left: 200px;
+  }
+
+  #womanpic{
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  #infoboks{
+    font-size: 20pt;
+    background-color: #FFFFFF;
+    width: 50%;
+    margin-left: 200px;
+  }
+
+  #text{
+    background-color: #FFFFFF;
+    padding: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 20pt;
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    font-size: 24pt;
+  }
+
+  .posts div {
+    padding: 20px; }
+
+  .blog {
+    padding: 20px 50px;
+    margin-bottom: 20px;
+    background-color: #e1f5fe;
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+
+}
+
+@media screen and (min-width: 1500px) {
+
+}
+
+
+
 
 /*# sourceMappingURL=styles.css.map */

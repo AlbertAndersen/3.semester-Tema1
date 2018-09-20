@@ -526,12 +526,17 @@ Alle scripts
 
 
         $(document).ajaxComplete(function () {
+            setTimeout(
+                function()
+                {
+                    //loader javascript til slide
+                    $.getScript("//code.jquery.com/jquery-1.11.0.min.js");
+                    $.getScript("//code.jquery.com/jquery-migrate-1.2.1.min.js");
+                    $.getScript("slick/slick.min.js");
+                    $.getScript("js/slides.js");
+                    //do something special
+                }, 300);
 
-            //loader javascript til slide
-            $.getScript("//code.jquery.com/jquery-1.11.0.min.js");
-            $.getScript("//code.jquery.com/jquery-migrate-1.2.1.min.js");
-            $.getScript("slick/slick.min.js");
-            $.getScript("js/slides.js");
 
 
 

@@ -89,7 +89,17 @@ h2 {
   max-width: 800px;
   margin: auto; }
 
+
+
+#womanpic{
+   height: 200px;
+  width: auto;
+  }
+
+
+
 /*Anne har kodet dette------------*/
+
 
 
 #1{
@@ -122,6 +132,7 @@ h2 {
 #postboks{
   background-color: #FFFFFF;
 }
+
 
 @media screen and (min-width: 644px) {
   .posts {
@@ -199,6 +210,13 @@ h2 {
   background-image: url("../images/memeTest.jpg");
   background-position: center;
   background-size: cover; }
+
+
+
+@media screen and (max-width: 644px) {
+  /*================Instagram===============*/
+  .instagram {
+    height: auto; }
 
 
 @media screen and (min-width: 768px) {

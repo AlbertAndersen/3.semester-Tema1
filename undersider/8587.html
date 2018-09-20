@@ -1,0 +1,200 @@
+<!-- Fortæller det er html5 -->
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da">
+
+<!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
+<head>
+
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../css/styles.css"  media="screen,projection"/>
+
+
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+
+    <!--jquery ved ikke hvorfor der skal være 2-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<!-- i <body> har man alt indhold på siden -->
+<body>
+
+<nav>
+    <div class="nav-wrapper light-blue">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="Blog.html">blog</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="Blog.html">blog</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+</ul>
+
+<div class="overskrift">
+
+</div>
+
+<div class="filmen">
+
+    <div class="tekstTilBilleder">
+        <div class="beskrivelsen">
+            <h5>Beskrivelse</h5>
+
+        </div>
+
+        <div class="detaljer">
+            <h5>Detaljer</h5>
+
+
+            <div class="vote">
+
+                <h6>rating</h6>
+            </div>
+
+            <div class="runtime">
+
+                <h6>runtime</h6>
+
+            </div>
+
+            <div class="release_date">
+
+                <h6>release date</h6>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<footer class="page-footer light-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+
+
+    $(document).ready(function () {
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+
+            //Listen der skal hentes ned
+            url: "https://api.themoviedb.org/3/movie/8587",
+            data: {
+                'api_key':'612dfe3ebee135bbfa3a3a3b371c21e2',
+                'language':'da_DA'
+            },
+
+            //gør dette hvis det virker
+            success: function(result) {
+                console.log(result),
+
+                    //Vælger div'en "ugensslide". Prepend indsætter det i parentesen. I dette tilfælde er det navnet på listen.
+                    $(".overskrift").prepend(
+                        "<h2>" + result.title + "</h2>"
+
+                    )
+
+                    $(".filmen").prepend(
+
+                        "<img src=\"https://image.tmdb.org/t/p/w780" + result.poster_path +"\">"
+                    )
+
+                $(".beskrivelsen").append(
+
+                    "<div> "  + result.overview + " </div> "
+
+
+                )
+
+
+
+                $(".runtime").append(
+
+                    "<div> "  + result.runtime + " min </div> "
+
+                )
+
+                $(".vote").append(
+
+                    "<div> "  + result.vote_average + "/10 </div> "
+
+                )
+
+                $(".release_date").append(
+
+                    "<div> "  + result.release_date + " </div> "
+
+                )
+
+
+
+            },
+            error: function (error) {
+                // Hvis den fejler. Fejl kan ses ved højreklik=>inspect=>Console i chrome (+ ud fra object)
+                console.log(error);
+            }
+
+
+        });
+    });
+</script>
+
+<script type="text/javascript" src="../js/materialize.js"></script>
+</body>
+
+
+</html>

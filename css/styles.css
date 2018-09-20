@@ -97,6 +97,9 @@ h2 {
   }
 
 
+h3 a {color: black;
+}
+
 
 /*Anne har kodet dette------------*/
 
@@ -133,10 +136,14 @@ h2 {
   background-color: #FFFFFF;
 }
 
+@media screen and (min-width: 860px) {
+  .posts {
+    flex-direction: row;
+  }
+}
 
 @media screen and (min-width: 644px) {
-  .posts {
-    flex-direction: row; }
+
 
   .filmen {
     flex-direction: row; } }
@@ -214,12 +221,8 @@ h2 {
 
 
 @media screen and (max-width: 644px) {
-  /*================Instagram===============*/
-  .instagram {
-    height: auto; }
 
-
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
 
   #womanpic{
     width: 100%;
@@ -241,14 +244,7 @@ h2 {
     font-size: 24pt;
   }
 
-  .posts {
-    display: flex;
-    flex-direction: column;
-    font-size: 24pt;
-  }
 
-  .posts div {
-    padding: 20px; }
 
   .blog {
     padding: 20px 50px;
@@ -272,6 +268,15 @@ h2 {
   #post3pic{
     width: 100%;
     height: auto;
+  }
+  .posts {
+    display: flex;
+    flex-direction: column;
+    font-size: 24pt;
+  }
+
+  .posts div {
+    padding: 20px;
   }
 }
 
@@ -342,11 +347,8 @@ h2 {
 
 }
 
-@media screen and (min-width: 1500px) {
-
-}
 
 
 
 
-/*# sourceMappingURL=styles.css.map */
+

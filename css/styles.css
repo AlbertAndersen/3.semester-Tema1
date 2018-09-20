@@ -5,10 +5,10 @@ h2 {
   padding-top: 0px; }
 
 .nav-wrapper {
-  padding: 0 50px; }
+  padding: 0 70px; }
 
 .brand-logo img {
-  height: 64px; }
+  height: 50px; }
 
 .slides {
   padding: 0 50px 50px 50px; }
@@ -81,6 +81,23 @@ h2 {
   padding: 50px;
   max-width: 800px;
   margin: auto; }
+
+
+#womanpic{
+   height: 200px;
+  width: auto;
+  }
+
+
+
+  #infoboks{
+    font-size: 18pt;
+  }
+
+
+
+
+
 
 
 

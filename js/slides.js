@@ -59,6 +59,7 @@ $('.fullSlider').slick({
     speed: 500,
     fade: true,
     autoplay: true,
+    arrows: false,
     cssEase: 'linear'
 });
 

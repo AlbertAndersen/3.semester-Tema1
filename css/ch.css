@@ -14,15 +14,22 @@
     padding: 0 10px;
 }
 .blogallech{
-    margin-top: 10px;
+    margin-top: 20px;
     vertical-align: middle;
     background-color: #fff;
     padding: 10px;
+    box-shadow: 0 5px 10px 0 #888;
 }
 
 .udenomaltch{
     max-width: 1500px;
     margin: auto;
+}
+
+.knapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
 .columnch img{
@@ -37,10 +44,10 @@
     }
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1100px){
     .columnch{
-        flex: 33%;
-        max-width: 33%;
+        flex: 25%;
+        max-width: 25%;
     }
 }
 /*=========OVERORDNET BLOG SLUT=Christina=========*/

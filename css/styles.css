@@ -1,5 +1,7 @@
 body {
-  background-color: #cbf3ff; }
+  background-color: #cbf3ff; 
+  font-family: "Comic Sans MS";
+}
 
 h1{
   font-size: 36pt;
@@ -141,9 +143,7 @@ h3 a {color: black;
   background-color: #FFFFFF;
 }
 
-.posts .postblogting {
-width: 33%
-}
+
 
 @media screen and (min-width: 860px) {
   .posts {
@@ -287,6 +287,10 @@ width: 33%
   .posts div {
     padding: 20px;
   }
+  .posts .postblogting {
+    width: 33%
+  }
+
 }
 
 @media screen and (min-width: 1024px) {

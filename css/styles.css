@@ -1,5 +1,7 @@
 body {
-  background-color: #e1f5fe; }
+  background-color: #cbf3ff;
+  font-family: 'Roboto', sans-serif;
+}
 
 h1{
   font-size: 36pt;
@@ -8,6 +10,10 @@ h1{
 h2 {
   padding-top: 0;
   padding-left: 15px;
+}
+
+.white {
+background-color: #1fff36
 }
 
 .nav-wrapper {
@@ -35,8 +41,8 @@ h2 {
 
 .blog {
   padding: 20px 50px;
-  margin-bottom: 20px;
-  background-color: #e1f5fe; }
+
+  background-color: #ffffff; }
 
 .fullSlider a {
   text-decoration: none;
@@ -101,6 +107,7 @@ h3 a {color: black;
 }
 
 
+
 /*Anne har kodet dette------------*/
 
 
@@ -141,12 +148,14 @@ h3 a {color: black;
   background-color: #FFFFFF;
 }
 
+
 .billederiblog{
   max-width: 50%;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
+
 
 @media screen and (min-width: 860px) {
   .posts {
@@ -290,6 +299,10 @@ h3 a {color: black;
   .posts div {
     padding: 20px;
   }
+  .posts .postblogting {
+    width: 33%
+  }
+
 }
 
 @media screen and (min-width: 1024px) {

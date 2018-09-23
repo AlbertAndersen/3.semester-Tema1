@@ -35,11 +35,19 @@ $('.sekundaerslide').slick({
     autoplaySpeed: 3320,
     responsive: [
         {
-            breakpoint: 768,
+            breakpoint: 1400,
             settings: {
                 arrows: false,
                 centerMode: true,
                 slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 906,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                slidesToShow: 1
             }
         },
         {

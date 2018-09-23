@@ -36,6 +36,11 @@
     width: 100%;
 }
 
+#womanpic{
+    height: 200px;
+    width: auto;
+}
+
 h3 {
     font-size: 2rem;
 }

@@ -32,7 +32,7 @@ $('.sekundaerslide').slick({
     slidesToShow: 3,
     centerPadding: '40px',
     autoplay: true,
-    autoplaySpeed: 3320,
+    autoplaySpeed: 1500,
     responsive: [
         {
             breakpoint: 1400,

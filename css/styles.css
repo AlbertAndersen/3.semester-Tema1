@@ -1,11 +1,15 @@
 @charset "UTF-8";
 /*Generelt*/
 body {
-  background-color: #ffffff;
-  font-family: 'Roboto', sans-serif; }
+  background-color: #e1f5fe;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px; }
 
 h1 {
   font-size: 36pt; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold; }
 
 /*
 Farver
@@ -80,9 +84,6 @@ forside
 .ugensSlide h2 {
   text-align: center;
   text-transform: uppercase; }
-
-.liste3 {
-  background-color: #ffffff; }
 
 /*
 Blog

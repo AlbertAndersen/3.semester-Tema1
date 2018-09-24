@@ -69,7 +69,7 @@ forside
 }
 
 .udvalgtBlogindlaeg {
-  background-image: url("../images/blogPost.jpg");
+  background-image: url("../images/blogmulansmal.png");
   background-size: cover;
   background-position: center center;
 }
@@ -82,6 +82,13 @@ forside
 
 .tekstSlide {
   padding: 50px;
+  h1{
+    font-size: 50pt;
+  }
+  p{
+    font-size: 30px;
+
+  }
 }
 
 /*nyeste indlæg*/

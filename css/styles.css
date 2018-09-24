@@ -42,7 +42,7 @@ forside
   background-position: center center; }
 
 .udvalgtBlogindlaeg {
-  background-image: url("../images/blogPost.jpg");
+  background-image: url("../images/blogmulansmal.png");
   background-size: cover;
   background-position: center center; }
 
@@ -53,8 +53,12 @@ forside
 
 .tekstSlide {
   padding: 50px; }
+  .tekstSlide h1 {
+    font-size: 50pt; }
+  .tekstSlide p {
+    font-size: 30px; }
 
-/*nyeste indlæg*/
+/*nyeste indl├ªg*/
 .posts {
   display: flex;
   flex-direction: column; }

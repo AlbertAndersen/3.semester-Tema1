@@ -53,8 +53,12 @@ forside
 
 .tekstSlide {
   padding: 50px; }
+  .tekstSlide h1 {
+    font-size: 50pt; }
+  .tekstSlide p {
+    font-size: 30px; }
 
-/*nyeste indlæg*/
+/*nyeste indl├ªg*/
 .posts {
   display: flex;
   flex-direction: column; }
